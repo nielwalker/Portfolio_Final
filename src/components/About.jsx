@@ -61,7 +61,7 @@ const About = () => {
               <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-white mb-4">Who I Am</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
-                  I'm a passionate full-stack developer with a keen eye for creating beautiful, 
+                  I'm a passionate vibe coder developer with a keen eye for creating beautiful, 
                   functional, and user-friendly websites. My journey in web development started 
                   with a curiosity about how things work on the internet, which led me to dive 
                   deep into the world of coding.
