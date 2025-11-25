@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaBriefcase, FaCode, FaLaptopCode, FaLightbulb, FaTrophy } from 'react-icons/fa'
+import { FaGraduationCap, FaBriefcase, FaCode, FaLaptop, FaLightbulb, FaTrophy } from 'react-icons/fa'
 
 const About = () => {
   const achievements = [
