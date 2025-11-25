@@ -41,7 +41,7 @@ const Hero = () => {
               <span className="text-cyan-500 dark:text-cyan-400">{displayedName}</span>
             </h1>
             <p className="text-xl text-gray-200 dark:text-gray-300 mb-8">
-              A Student Vibe coder developer creating amazing web experiences
+              A Video Editor focused on transforming concepts into polished, compelling videos.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <a
