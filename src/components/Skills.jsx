@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { FaNodeJs, FaDatabase, FaGitAlt, FaPython } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaPython } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiCapcut, SiAdobephotoshop} from 'react-icons/si'
 
 const Skills = () => {
   const skills = [
-    { name: 'Capcut', icon: <SiCapcut className="w-12 h-12 text-white-500" /> },
+    { name: 'React', icon: <FaReact className="w-12 h-12 text-voilet-500" /> },
     { name: 'Photoshop', icon: <SiAdobephotoshop className="w-12 h-12 text-blue-500" /> },
     { name: 'TypeScript', icon: <SiTypescript className="w-12 h-12 text-blue-600" /> },
     { name: 'Node.js', icon: <FaNodeJs className="w-12 h-12 text-green-500" /> },
