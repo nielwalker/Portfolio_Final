@@ -4,24 +4,14 @@ import { FaGraduationCap, FaBriefcase, FaCode, FaLaptopCode, FaLightbulb, FaTrop
 const About = () => {
   const achievements = [
     {
-      icon: <FaCode className="w-8 h-8 text-cyan-500" />,
-      title: "Coding Experience",
-      description: "3+ years of experience in web development and software engineering"
-    },
-    {
-      icon: <FaLaptopCode className="w-8 h-8 text-cyan-500" />,
+      icon: <FaLaptop className="w-8 h-8 text-cyan-500" />,
       title: "Projects Completed",
-      description: "Successfully delivered 20+ projects across various domains"
+      description: "Successfully edited 20+ projects across various clients"
     },
     {
       icon: <FaLightbulb className="w-8 h-8 text-cyan-500" />,
       title: "Problem Solving",
       description: "Strong analytical skills and creative problem-solving abilities"
-    },
-    {
-      icon: <FaTrophy className="w-8 h-8 text-cyan-500" />,
-      title: "Achievements",
-      description: "Multiple hackathon wins and coding competition awards"
     }
   ]
 
@@ -61,16 +51,17 @@ const About = () => {
               <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-white mb-4">Who I Am</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
-                  I'm a passionate vibe coder developer with a keen eye for creating beautiful, 
-                  functional, and user-friendly websites. My journey in web development started 
-                  with a curiosity about how things work on the internet, which led me to dive 
-                  deep into the world of coding.
+                  I’m a video editor who loves turning raw footage into meaningful,
+                  emotionally driven stories. What excites me most about editing is the blend
+                  of creativity and precision finding the rhythm, pacing, and visual style that
+                  brings a project to life. Whether I’m crafting short-form content, social media
+                  edits, or full narrative pieces, 
                 </p>
                 <p className="text-gray-200 dark:text-gray-300">
-                  I believe in writing clean, efficient code and creating intuitive user 
-                  experiences. When I'm not coding, you'll find me exploring new technologies, 
-                  contributing to open-source projects, or sharing my knowledge through 
-                  technical writing.
+                  I focus on making every cut intentional and
+                  every scene engaging. I enjoy collaborating with creators, brands, and teams to
+                  shape ideas into compelling visuals that connect with audiences. For me, editing
+                  isn’t just a skill it’s the way I turn moments into stories people feel.
                 </p>
               </div>
 
@@ -82,14 +73,9 @@ const About = () => {
                   </div>
                   <div className="space-y-3">
                     <div>
-                      <h4 className="text-white font-medium">Bachelor of Computer Science</h4>
-                      <p className="text-gray-300">University Name</p>
-                      <p className="text-gray-400 text-sm">2018 - 2022</p>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-medium">Web Development Bootcamp</h4>
-                      <p className="text-gray-300">Coding Academy</p>
-                      <p className="text-gray-400 text-sm">2022</p>
+                      <h4 className="text-white font-medium">Bachelor of Information Technology</h4>
+                      <p className="text-gray-300">University of Science and Technology of Southern Philippines</p>
+                      <p className="text-gray-400 text-sm">2020 - 2026</p>
                     </div>
                   </div>
                 </div>
@@ -101,14 +87,14 @@ const About = () => {
                   </div>
                   <div className="space-y-3">
                     <div>
-                      <h4 className="text-white font-medium">Senior Developer</h4>
-                      <p className="text-gray-300">Tech Company</p>
-                      <p className="text-gray-400 text-sm">2022 - Present</p>
+                      <h4 className="text-white font-medium">Video Editing</h4>
+                      <p className="text-gray-300">Vloggers Videos</p>
+                      <p className="text-gray-400 text-sm">2023 - Present</p>
                     </div>
                     <div>
-                      <h4 className="text-white font-medium">Junior Developer</h4>
-                      <p className="text-gray-300">Startup Inc.</p>
-                      <p className="text-gray-400 text-sm">2020 - 2022</p>
+                      <h4 className="text-white font-medium">Photoshop Editing</h4>
+                      <p className="text-gray-300">Local Tarpaulin</p>
+                      <p className="text-gray-400 text-sm">2023 - Present</p>
                     </div>
                   </div>
                 </div>
@@ -126,15 +112,16 @@ const About = () => {
               <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-white mb-4">My Approach</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
-                  I approach each project with a focus on creating scalable, maintainable, 
-                  and efficient solutions. My development process involves:
+                  My approach to video editing is grounded in understanding the story first.
+                  Before I touch the timeline, I take time to learn the message, the emotion, and
+                  the audience the project is meant for. My development process involves:
                 </p>
                 <ul className="list-disc list-inside text-gray-200 dark:text-gray-300 space-y-2">
-                  <li>Thorough planning and architecture design</li>
-                  <li>Writing clean, documented code</li>
-                  <li>Implementing best practices and design patterns</li>
-                  <li>Rigorous testing and quality assurance</li>
-                  <li>Continuous learning and improvement</li>
+                  <li>Discovery & Understanding</li>
+                  <li>Project Brief & Goal Alignment</li>
+                  <li>Organizing & Reviewing Footage</li>
+                  <li>Client Feedback & Revisions</li>
+                  <li>Final Export & Delivery</li>
                 </ul>
               </div>
 
