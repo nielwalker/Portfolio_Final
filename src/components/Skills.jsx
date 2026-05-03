@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaPython } from 'react-icons/fa'
-import { SiTypescript, SiMongodb, SiCapcut, SiAdobephotoshop} from 'react-icons/si'
+import { SiTypescript, SiMongodb, SiAdobephotoshop } from 'react-icons/si'
 
 const Skills = () => {
   const skills = [
@@ -29,7 +29,7 @@ const Skills = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/skills-bg.mp4"
       />
-      <div className="relative z-10 bg-gray-900/70 dark:bg-gray-900/80 w-full py-20">
+      <div className="pixel-section relative z-10 w-full py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,8 +38,7 @@ const Skills = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Skills</h2>
-            <div className="w-24 h-1 bg-cyan-500 mx-auto"></div>
+            <h2 className="pixel-title text-3xl font-bold text-white mb-4">Skills</h2>
           </motion.div>
 
           <div className="space-y-8">
@@ -49,7 +48,7 @@ const Skills = () => {
                 {[...firstRow, ...firstRow].map((skill, index) => (
                   <motion.div
                     key={`${skill.name}-${index}`}
-                    className="flex-none w-[200px] mx-4 flex flex-col items-center p-6 bg-white/10 dark:bg-gray-700/50 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    className="pixel-card flex-none w-[200px] mx-4 flex flex-col items-center p-6"
                   >
                     {skill.icon}
                     <h3 className="mt-4 text-lg font-semibold text-white">
@@ -66,7 +65,7 @@ const Skills = () => {
                 {[...secondRow, ...secondRow].map((skill, index) => (
                   <motion.div
                     key={`${skill.name}-${index}`}
-                    className="flex-none w-[200px] mx-4 flex flex-col items-center p-6 bg-white/10 dark:bg-gray-700/50 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    className="pixel-card flex-none w-[200px] mx-4 flex flex-col items-center p-6"
                   >
                     {skill.icon}
                     <h3 className="mt-4 text-lg font-semibold text-white">

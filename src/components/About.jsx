@@ -26,7 +26,7 @@ const About = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/about-bg.mp4"
       />
-      <div className="relative z-10 bg-gray-900/70 dark:bg-gray-900/80 w-full py-20">
+      <div className="pixel-section relative z-10 w-full py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -35,8 +35,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
-            <div className="w-24 h-1 bg-cyan-500 mx-auto"></div>
+            <h2 className="pixel-title text-3xl font-bold text-white mb-4">About Me</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -48,7 +47,16 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
+              <div className="pixel-panel">
+                <motion.img
+                  src="/profile_pic-1.png"
+                  alt="Niel profile"
+                  initial={{ opacity: 0, scale: 0.75 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="pixel-image float-left mr-8 mb-6 h-40 w-40 sm:h-48 sm:w-48 object-cover"
+                />
                 <h3 className="text-xl font-semibold text-white mb-4">Who I Am</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
                   I’m a video editor who loves turning raw footage into meaningful,
@@ -66,7 +74,7 @@ const About = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
+                <div className="pixel-panel">
                   <div className="flex items-center gap-3 mb-4">
                     <FaGraduationCap className="w-6 h-6 text-cyan-500" />
                     <h3 className="text-xl font-semibold text-white">Education</h3>
@@ -80,7 +88,7 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
+                <div className="pixel-panel">
                   <div className="flex items-center gap-3 mb-4">
                     <FaBriefcase className="w-6 h-6 text-cyan-500" />
                     <h3 className="text-xl font-semibold text-white">Experience</h3>
@@ -109,7 +117,7 @@ const About = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md">
+              <div className="pixel-panel">
                 <h3 className="text-xl font-semibold text-white mb-4">My Approach</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
                   My approach to video editing is grounded in understanding the story first.
@@ -133,7 +141,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/10 dark:bg-gray-700/50 p-6 rounded-lg shadow-md"
+                    className="pixel-card p-6"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       {achievement.icon}

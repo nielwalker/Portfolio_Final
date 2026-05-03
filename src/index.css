@@ -11,10 +11,18 @@
     scroll-behavior: smooth;
     @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    image-rendering: pixelated;
+  }
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Courier New", "Lucida Console", Monaco, monospace;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,8 +31,8 @@
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -43,6 +51,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background:
+    linear-gradient(rgba(10, 15, 28, 0.78), rgba(10, 15, 28, 0.78)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 6px
+    );
 }
 
 h1 {
@@ -51,7 +68,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -79,5 +96,116 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@layer components {
+  .pixel-screen {
+    background:
+      linear-gradient(rgba(7, 10, 22, 0.76), rgba(7, 10, 22, 0.82)),
+      repeating-linear-gradient(
+        90deg,
+        rgba(34, 211, 238, 0.08) 0,
+        rgba(34, 211, 238, 0.08) 1px,
+        transparent 1px,
+        transparent 12px
+      );
+  }
+
+  .pixel-section {
+    background:
+      linear-gradient(rgba(8, 13, 28, 0.84), rgba(12, 18, 34, 0.88)),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.05) 0,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 8px
+      );
+  }
+
+  .pixel-panel {
+    @apply bg-slate-950/80 border-2 border-cyan-300 p-6;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 #0e7490, 12px 12px 0 rgba(0, 0, 0, 0.65);
+  }
+
+  .pixel-card {
+    @apply bg-slate-950/85 border-2 border-cyan-300 transition-transform;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 #0e7490;
+  }
+
+  .pixel-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 #facc15;
+  }
+
+  .pixel-button {
+    @apply inline-flex items-center justify-center border-2 border-cyan-200 bg-cyan-500 px-6 py-3 font-bold uppercase tracking-widest text-slate-950 transition-transform;
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #facc15;
+  }
+
+  .pixel-button:hover {
+    @apply bg-yellow-300 text-slate-950;
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #22d3ee;
+  }
+
+  .pixel-button-secondary {
+    @apply inline-flex items-center justify-center border-2 border-cyan-300 bg-slate-950/80 px-6 py-3 font-bold uppercase tracking-widest text-cyan-200 transition-transform;
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #155e75;
+  }
+
+  .pixel-button-secondary:hover {
+    @apply bg-cyan-300 text-slate-950;
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #facc15;
+  }
+
+  .pixel-nav {
+    @apply border-2 border-cyan-300 bg-slate-950/90 px-3 py-2 uppercase tracking-widest text-cyan-100;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 #0e7490;
+  }
+
+  .pixel-nav-active {
+    @apply border-yellow-300 bg-yellow-300 text-slate-950;
+    box-shadow: 4px 4px 0 #22d3ee;
+  }
+
+  .pixel-title {
+    @apply uppercase tracking-widest text-white;
+    text-shadow: 3px 3px 0 #0891b2, 5px 5px 0 #111827;
+  }
+
+  .pixel-divider {
+    @apply mx-auto h-2 w-28 border-2 border-yellow-300 bg-cyan-400;
+    box-shadow: 4px 4px 0 #0e7490;
+  }
+
+  .pixel-chip {
+    @apply border-2 border-cyan-300 bg-slate-950 px-2 py-1 text-xs uppercase tracking-wider text-yellow-200;
+    border-radius: 0;
+  }
+
+  .pixel-input {
+    @apply mt-1 block w-full border-2 border-cyan-300 bg-slate-950/80 px-4 py-3 text-base text-white placeholder-gray-400 outline-none transition-colors;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 #155e75;
+  }
+
+  .pixel-input:focus {
+    @apply border-yellow-300 bg-slate-900;
+    box-shadow: 4px 4px 0 #22d3ee;
+  }
+
+  .pixel-image {
+    @apply border-4 border-cyan-300;
+    border-radius: 0;
+    image-rendering: pixelated;
+    box-shadow: 8px 8px 0 #facc15, 12px 12px 0 rgba(0, 0, 0, 0.7);
   }
 }

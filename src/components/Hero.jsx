@@ -27,51 +27,35 @@ const Hero = () => {
   const displayedName = fullName.slice(0, index)
 
   return (
-    <section id="home" className="pt-20 min-h-screen flex items-center">
+    <section id="home" className="pt-20 min-h-screen flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="flex justify-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center md:text-left"
+            className="max-w-3xl text-center"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+            <h1 className="pixel-title text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
               <span className="text-white">Hi, I'm </span>
-              <span className="text-cyan-500 dark:text-cyan-400">{displayedName}</span>
+              <span className="text-yellow-300">{displayedName}</span>
             </h1>
-            <p className="text-xl text-gray-200 dark:text-gray-300 mb-8">
+            <p className="pixel-panel text-xl text-gray-200 dark:text-gray-300 mb-8">
               A Video Editor focused on transforming concepts into polished, compelling videos.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="#contact"
-                className="px-6 py-3 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition-colors"
+                className="pixel-button"
               >
                 Contact Me
               </a>
               <a
                 href="#projects"
-                className="px-6 py-3 border border-cyan-500 text-cyan-500 dark:text-cyan-400 rounded-lg hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition-colors"
+                className="pixel-button-secondary"
               >
                 View Projects
               </a>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center"
-          >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-              {/* Profile image inside the circle */}
-              <img
-                src="/profile.jpg"
-                alt="Profile"
-                className="rounded-full w-full h-full object-cover border-4 border-cyan-500 shadow-lg"
-              />
             </div>
           </motion.div>
         </div>

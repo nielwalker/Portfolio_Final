@@ -37,7 +37,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed w-full bg-transparent shadow-md z-50">
+    <nav className="fixed w-full bg-transparent z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-16">
         {/* Removed Portfolio logo/title */}
         
@@ -49,10 +49,10 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => handleNavClick(item.name)}
-                className={`px-3 py-2 rounded-md text-lg transition-colors
+                className={`pixel-nav text-sm transition-colors
                   ${activeSection === item.name
-                    ? 'text-white font-bold'
-                    : 'text-gray-600 dark:text-gray-300 font-medium'}`}
+                    ? 'pixel-nav-active font-bold'
+                    : 'font-medium'}`}
               >
                 {item.name}
               </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500"
+            className="pixel-button-secondary p-2 text-cyan-100 focus:outline-none"
           >
             {isOpen ? (
               <XMarkIcon className="block h-6 w-6" />
@@ -78,16 +78,16 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="pixel-panel mx-4 px-2 pt-2 pb-3 space-y-3 sm:px-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => handleNavClick(item.name)}
-                className={`block px-3 py-2 rounded-md text-xl transition-colors
+                className={`block pixel-nav text-base transition-colors
                   ${activeSection === item.name
-                    ? 'text-white font-bold'
-                    : 'text-gray-600 dark:text-gray-300 font-medium'}`}
+                    ? 'pixel-nav-active font-bold'
+                    : 'font-medium'}`}
               >
                 {item.name}
               </a>

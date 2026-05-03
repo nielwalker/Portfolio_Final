@@ -76,7 +76,7 @@ const Projects = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/projects-bg.mp4"
       />
-      <div className="relative z-10 bg-gray-900/70 dark:bg-gray-900/80 w-full h-full flex flex-col">
+      <div className="pixel-section relative z-10 w-full h-full flex flex-col">
         <div className="w-full px-4 sm:px-6 lg:px-8 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,8 +85,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Projects</h2>
-            <div className="w-24 h-1 bg-cyan-500 mx-auto"></div>
+            <h2 className="pixel-title text-3xl font-bold text-white mb-4">Projects</h2>
           </motion.div>
 
           <div className="flex flex-col h-[calc(100vh-8rem)]">
@@ -99,7 +98,7 @@ const Projects = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 dark:bg-gray-700/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-[320px]"
+                  className="pixel-card overflow-hidden flex flex-col h-[320px]"
                 >
                   <div className="relative h-32 flex-shrink-0">
                     <img
@@ -119,7 +118,7 @@ const Projects = () => {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 rounded-full text-xs"
+                          className="pixel-chip"
                         >
                           {tech}
                         </span>
@@ -159,7 +158,7 @@ const Projects = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 dark:bg-gray-700/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col h-[320px]"
+                  className="pixel-card overflow-hidden flex flex-col h-[320px]"
                 >
                   <div className="relative h-32 flex-shrink-0">
                     <img
@@ -179,7 +178,7 @@ const Projects = () => {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-600 dark:text-cyan-300 rounded-full text-xs"
+                          className="pixel-chip"
                         >
                           {tech}
                         </span>
