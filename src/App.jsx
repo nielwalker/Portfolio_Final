@@ -7,10 +7,10 @@ import { useRef, useState } from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 const credentials = [
-  { label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-  { label: 'Phone No.', value: '0955 928 4872', href: 'tel:09559284872' },
-  { label: 'Birthday', value: 'Add your birthday' },
-  { label: 'Address', value: 'Add your address' },
+  { label: 'Email', value: 'nielcaspillo41201@gmail.com', href: 'mailto:nielcaspillo41201@gmail.com' },
+  { label: 'Phone No.', value: '+63 955 928 4872', href: 'tel:+639559284872' },
+  { label: 'Birthday', value: 'April 12, 2001' },
+  { label: 'Address', value: 'Cagayan De Oro City, Misamis Oriental' },
 ]
 
 const socialLinks = [
@@ -21,6 +21,7 @@ const socialLinks = [
 
 function App() {
   const [activeSection, setActiveSection] = useState('About')
+  const [isProfileHovered, setIsProfileHovered] = useState(false)
   const contentScrollRef = useRef(null)
 
   const handleSectionChange = (section) => {
@@ -40,13 +41,15 @@ function App() {
         <aside className="border-b-2 border-cyan-300 bg-slate-950/95 px-5 py-6 sm:px-8 sm:py-8 lg:h-screen lg:overflow-hidden lg:border-b-0 lg:border-r-2">
           <div className="mx-auto max-w-sm lg:max-w-none">
             <img
-              src="/profile_pic-1.png"
-              alt="Niel R. Caspillo"
+              src={isProfileHovered ? '/smile1.jpg' : '/formal1.jpg'}
+              alt="Niel Nico R. Caspillo"
+              onMouseEnter={() => setIsProfileHovered(true)}
+              onMouseLeave={() => setIsProfileHovered(false)}
               className="pixel-image mx-auto h-32 w-32 object-cover sm:h-40 sm:w-40 lg:h-36 lg:w-36 xl:h-44 xl:w-44"
             />
             <div className="mt-5 text-center sm:mt-8">
               <p className="text-xs font-bold uppercase tracking-widest text-cyan-300">Video Editor</p>
-              <h1 className="pixel-title mt-2 text-2xl font-bold">Niel R. Caspillo</h1>
+              <h1 className="pixel-title mt-2 text-2xl font-bold">Niel Nico R. Caspillo</h1>
             </div>
 
             <dl className="mt-6 space-y-3 border-y-2 border-cyan-900 py-5 text-sm xl:mt-8 xl:space-y-4 xl:py-6">
@@ -55,7 +58,7 @@ function App() {
                   <dt className="text-xs font-bold uppercase tracking-widest text-cyan-300">{credential.label}</dt>
                   <dd className="mt-1 break-words text-slate-200">
                     {credential.href ? (
-                      <a className="hover:text-yellow-300" href={credential.href}>{credential.value}</a>
+                      <a className="text-white hover:text-yellow-300" href={credential.href}>{credential.value}</a>
                     ) : credential.value}
                   </dd>
                 </div>

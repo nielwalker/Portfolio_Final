@@ -38,16 +38,16 @@ const About = () => {
             <h2 className="pixel-title text-3xl font-bold text-white mb-4">About Me</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column - Personal Info */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="h-full"
             >
-              <div className="pixel-panel">
+              <div className="pixel-card flex h-full flex-col p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Who I Am</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
                   I’m a video editor who loves turning raw footage into meaningful,
@@ -63,52 +63,16 @@ const About = () => {
                   isn’t just a skill it’s the way I turn moments into stories people feel.
                 </p>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="pixel-panel">
-                  <div className="flex items-center gap-3 mb-4">
-                    <FaGraduationCap className="w-6 h-6 text-cyan-500" />
-                    <h3 className="text-xl font-semibold text-white">Education</h3>
-                  </div>
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-white font-medium">Bachelor of Information Technology</h4>
-                      <p className="text-gray-300">University of Science and Technology of Southern Philippines</p>
-                      <p className="text-gray-400 text-sm">2020 - 2026</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pixel-panel">
-                  <div className="flex items-center gap-3 mb-4">
-                    <FaBriefcase className="w-6 h-6 text-cyan-500" />
-                    <h3 className="text-xl font-semibold text-white">Experience</h3>
-                  </div>
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-white font-medium">Video Editing</h4>
-                      <p className="text-gray-300">Vloggers Videos</p>
-                      <p className="text-gray-400 text-sm">2023 - Present</p>
-                    </div>
-                    <div>
-                      <h4 className="text-white font-medium">Photoshop Editing</h4>
-                      <p className="text-gray-300">Local Tarpaulin</p>
-                      <p className="text-gray-400 text-sm">2023 - Present</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
 
-            {/* Right Column - Achievements */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="h-full"
             >
-              <div className="pixel-panel">
+              <div className="pixel-card flex h-full flex-col p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">My Approach</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
                   My approach to video editing is grounded in understanding the story first.
@@ -123,26 +87,68 @@ const About = () => {
                   <li>Final Export & Delivery</li>
                 </ul>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {achievements.map((achievement, index) => (
-                  <motion.div
-                    key={achievement.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="pixel-card p-6"
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      {achievement.icon}
-                      <h3 className="text-lg font-semibold text-white">{achievement.title}</h3>
-                    </div>
-                    <p className="text-gray-200 dark:text-gray-300">{achievement.description}</p>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="pixel-card h-full p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <FaGraduationCap className="w-6 h-6 text-cyan-500" />
+                  <h3 className="text-xl font-semibold text-white">Education</h3>
+                </div>
+                <h4 className="text-white font-medium">Bachelor of Information Technology</h4>
+                <p className="text-gray-300">University of Science and Technology of Southern Philippines</p>
+                <p className="text-gray-400 text-sm">2020 - 2026</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="pixel-card h-full p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <FaBriefcase className="w-6 h-6 text-cyan-500" />
+                  <h3 className="text-xl font-semibold text-white">Experience</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-white font-medium">Video Editing</h4>
+                    <p className="text-gray-300">Vloggers Videos</p>
+                    <p className="text-gray-400 text-sm">2023 - Present</p>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-medium">Photoshop Editing</h4>
+                    <p className="text-gray-300">Local Tarpaulin</p>
+                    <p className="text-gray-400 text-sm">2023 - Present</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={achievement.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
+                  viewport={{ once: true }}
+                  className="pixel-card h-full p-6"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    {achievement.icon}
+                    <h3 className="text-lg font-semibold text-white">{achievement.title}</h3>
+                  </div>
+                  <p className="text-gray-200 dark:text-gray-300">{achievement.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

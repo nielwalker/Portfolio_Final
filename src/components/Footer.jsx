@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-cyan-100 text-sm uppercase tracking-widest">
-            © {new Date().getFullYear()} Niel R. Caspillo. All rights reserved.
+            © {new Date().getFullYear()} Niel NicoR. Caspillo. All rights reserved.
           </p>
         </div>
       </div>
