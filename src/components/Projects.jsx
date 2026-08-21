@@ -61,12 +61,8 @@ const Projects = () => {
     },
   ]
 
-  // Split projects into two rows with exactly 4 projects each
-  const firstRow = projects.slice(0, 4)
-  const secondRow = projects.slice(4, 8)
-
   return (
-    <section id="projects" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="projects" className="relative min-h-screen w-full border-t-4 border-yellow-300">
       {/* Projects video background */}
       <video
         autoPlay
@@ -76,31 +72,29 @@ const Projects = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         src="/projects-bg.mp4"
       />
-      <div className="pixel-section relative z-10 w-full h-full flex flex-col">
-        <div className="w-full px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="pixel-section relative z-10 w-full min-h-screen py-16 sm:py-20">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-10 sm:mb-14"
           >
             <h2 className="pixel-title text-3xl font-bold text-white mb-4">Projects</h2>
           </motion.div>
 
-          <div className="flex flex-col h-[calc(100vh-8rem)]">
-            {/* First Row - Fixed Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              {firstRow.map((project, index) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {projects.map((project, index) => (
                 <motion.div
                   key={project.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="pixel-card overflow-hidden flex flex-col h-[320px]"
+                  className="pixel-card flex min-h-[20rem] flex-col overflow-hidden"
                 >
-                  <div className="relative h-32 flex-shrink-0">
+                  <div className="relative h-36 flex-shrink-0">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -146,68 +140,7 @@ const Projects = () => {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-
-            {/* Second Row - Same Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {secondRow.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="pixel-card overflow-hidden flex flex-col h-[320px]"
-                >
-                  <div className="relative h-32 flex-shrink-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-4 flex-grow flex flex-col">
-                    <h3 className="text-xl font-semibold text-white mb-2 line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-200 dark:text-gray-300 mb-3 flex-grow text-sm line-clamp-2">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="pixel-chip"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-4 mt-auto">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-200 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 text-sm"
-                      >
-                        <FaGithub className="w-4 h-4" />
-                        <span>Code</span>
-                      </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-200 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 text-sm"
-                      >
-                        <FaExternalLinkAlt className="w-4 h-4" />
-                        <span>Live Demo</span>
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </div>

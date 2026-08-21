@@ -19,7 +19,7 @@ const Skills = () => {
   const secondRow = skills.slice(4)
 
   return (
-    <section id="skills" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="skills" className="relative min-h-screen w-full border-t-4 border-yellow-300 flex items-center justify-center overflow-hidden">
       {/* Skills video background */}
       <video
         autoPlay

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaBriefcase, FaCode, FaLaptop, FaLightbulb, FaTrophy } from 'react-icons/fa'
+import { FaGraduationCap, FaBriefcase, FaLaptop, FaLightbulb } from 'react-icons/fa'
 
 const About = () => {
   const achievements = [
@@ -16,7 +16,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="about" className="relative min-h-screen w-full border-t-4 border-yellow-300 flex items-center justify-center overflow-hidden">
       {/* About video background */}
       <video
         autoPlay
@@ -48,15 +48,6 @@ const About = () => {
               className="space-y-6"
             >
               <div className="pixel-panel">
-                <motion.img
-                  src="/profile_pic-1.png"
-                  alt="Niel profile"
-                  initial={{ opacity: 0, scale: 0.75 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="pixel-image float-left mr-8 mb-6 h-40 w-40 sm:h-48 sm:w-48 object-cover"
-                />
                 <h3 className="text-xl font-semibold text-white mb-4">Who I Am</h3>
                 <p className="text-gray-200 dark:text-gray-300 mb-4">
                   I’m a video editor who loves turning raw footage into meaningful,
